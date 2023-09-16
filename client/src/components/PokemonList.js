@@ -22,7 +22,8 @@ function PokemonList(){
   return (
     <div>
         {Object.entries(pokemonData).map(([id,name])=>(
-          <PokemonElement props={{id:id, name:name, imgLink:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}}/>
+          
+          <PokemonElement key={id} id={id} name={name} imgLink={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}/>
         ))}
     </div>
   )

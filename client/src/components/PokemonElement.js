@@ -1,12 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 export default function PokemonElement(props){
+    
     const [poke,setPoke]=useState({
         id:props.id,
         name:props.name,
         imgLink:props.imgLink
     })
+
+    useEffect(()=>{
+        console.log(props)
+    },[poke])
 
     const mainBox={
         display:"flex",
