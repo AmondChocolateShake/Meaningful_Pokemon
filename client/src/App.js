@@ -4,7 +4,7 @@ import PokemonList from './components/PokemonList';
 
 function App() {
   return (
-    <div>
+    <div className='MainBoxCss'>
       <PokemonList/>
     </div>
   );

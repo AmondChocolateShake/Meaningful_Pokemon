@@ -1,5 +1,6 @@
 import React from "react";
 import PokemonElement from "./PokemonElement";
+import './PokemonList.css'
 
 const pokemonData = {
   "1": "Bulbasaur",
@@ -20,7 +21,7 @@ const pokemonData = {
 
 function PokemonList(){
   return (
-    <div>
+    <div className="PokemonListCss">
         {Object.entries(pokemonData).map(([id,name])=>(
           
           <PokemonElement key={id} id={id} name={name} imgLink={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}/>
