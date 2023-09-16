@@ -1,4 +1,5 @@
 import React from "react";
+import PokemonElement from "./PokemonElement";
 
 const pokemonData = {
   "1": "Bulbasaur",
@@ -21,7 +22,7 @@ function PokemonList(){
   return (
     <div>
         {Object.entries(pokemonData).map(([id,name])=>(
-          <div key={id}>{`${id} : ${name}`}</div>
+          <PokemonElement props={{id:id, name:name, imgLink:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}}/>
         ))}
     </div>
   )
