@@ -3,4 +3,6 @@
   position: relative;
   bottom: 85px;
   left: 130px;
+  width: 25px;
+  cursor: pointer;
 }
