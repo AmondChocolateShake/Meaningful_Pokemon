@@ -46,7 +46,9 @@ export default class PokeModel{
         this.my_pokemons.push(pokemon);
     }
 
-
+    pushFavPokemon(fav){
+        this.fav_pokemons=fav;
+    }
 
 
 }
