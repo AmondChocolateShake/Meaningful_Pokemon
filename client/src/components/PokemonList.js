@@ -21,7 +21,7 @@ const pokemonData = {
 
 function PokemonList(){
   return (
-    <div className="PokemonListCss">
+    <div className="PokemonList">
         {Object.entries(pokemonData).map(([id,name])=>(
           
           <PokemonElement key={id} id={id} name={name} imgLink={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}/>

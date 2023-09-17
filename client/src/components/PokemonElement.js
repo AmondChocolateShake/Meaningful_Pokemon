@@ -2,7 +2,18 @@ import { useEffect, useState } from "react";
 
 
 export default function PokemonElement(props){
-    
+    const [boxSt,setBoxSt]=useState({
+        display:"flex",
+        flexDirection:"column",
+        justifyContent:"center",
+        alignItems:"center",
+        
+        width:"150px",
+        height:"150px",
+        border:"1px solid black"
+    })
+
+
     const [poke,setPoke]=useState({
         id:props.id,
         name:props.name,
@@ -13,16 +24,7 @@ export default function PokemonElement(props){
         console.log(props)
     },[poke])
 
-    const mainBox={
-        display:"flex",
-        flexDirection:"column",
-        justifyContent:"center",
-        alignItems:"center",
-        
-        width:"150px",
-        height:"150px",
-        border:"1px solid black"
-    }
+
 
     const info={
         display:"flex",
@@ -33,8 +35,16 @@ export default function PokemonElement(props){
         height:"50px"
     }
 
+
+    const clickHandler=()=>{
+        setBoxSt({
+            ...boxSt,
+            backgroundColor:"gray"
+        })
+    }
+
     return(
-        <div style={mainBox}>
+        <div style={boxSt} onClick={clickHandler}>
             <img style={{width:"100px",height:"100px"}} src={poke.imgLink} alt="poke"></img>
             <div style={info}>
                 <div>{poke.id}</div>
