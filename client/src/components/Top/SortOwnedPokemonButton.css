@@ -1,0 +1,18 @@
+.SortOwnedPokemonButtonCss {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+
+  width: 10vw;
+  height: 5vh;
+
+  background-color: orangered;
+  border-radius: 15px;
+}
+
+.SortOwnedPokemonTextCss {
+  color: white;
+  font-size: 20px;
+}
