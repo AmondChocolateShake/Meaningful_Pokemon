@@ -34,15 +34,15 @@ function PokemonList() {
           <SwitchingHeart className="HeartPositionCss" />
         </div>
       ))}
-      {/* <div>
-        {Object.entries(_fav_pokemons).map(([id, name,imgLink]) => (
-          <PokemonElement key={id} id={id} name={name} imgLink={imgLink} />
+      <div className="PokemonList">
+        {_fav_pokemons.map((pokemon) => (
+          <PokemonElement key={pokemon.id} id={pokemon.id} name={pokemon.name} imgLink={pokemon.imgLink} />
         ))}
-      </div> */}
-
-      <div>
-        <PokemonElement key={_fav_pokemons[0].id} id={_fav_pokemons[0].id} name={_fav_pokemons[0].name} imgLink={_fav_pokemons[0].imgLink} />
       </div>
+
+      {/* <div>
+        <PokemonElement key={_fav_pokemons[0].id} id={_fav_pokemons[0].id} name={_fav_pokemons[0].name} imgLink={_fav_pokemons[0].imgLink} />
+      </div> */}
     </div>
   )
 }
