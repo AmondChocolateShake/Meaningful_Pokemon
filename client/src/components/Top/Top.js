@@ -1,4 +1,5 @@
 import Logo from "./Logo";
+import NavigationContainer from "./NavigationContainer";
 
 
 export default function Top(){
@@ -19,6 +20,7 @@ export default function Top(){
     return(
         <div style={main}>
             <Logo></Logo>
+            <NavigationContainer/>
         </div>
     )
 }
