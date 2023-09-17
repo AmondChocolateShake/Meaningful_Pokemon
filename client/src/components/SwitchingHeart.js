@@ -8,15 +8,17 @@ export default function SwichingHeart() {
 
 
   function handleSwitchingHeart() {
-    setFavorite(true);
+
+    if (isFavorite) {
+      setFavorite(false)
+    }
+    else {
+      setFavorite(true);
+    }
   }
 
-  useEffect(() => {
-
-  })
-
   return (
-    <div onClick={}>
+    <div style={{ cursor: "pointer" }} onClick={handleSwitchingHeart}>
       {isFavorite ? (
         <RedHeart />) :
         (<BlackHeart />

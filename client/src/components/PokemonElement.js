@@ -73,7 +73,7 @@ export default function PokemonElement(props) {
             <div style={infoSt}>
                 <div>{poke.id}</div>
                 <div>{poke.name}</div>
-                <SwichingHeart/>
+                <SwichingHeart />
             </div>
         </div>
     );
