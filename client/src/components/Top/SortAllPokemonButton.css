@@ -1,0 +1,18 @@
+.AllPokemonButtonCss {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+
+  width: 10vw;
+  height: 5vh;
+
+  background-color: gray;
+  border-radius: 15px;
+}
+
+.AllPokemonButtonTextCss {
+  color: white;
+  font-size: 20px;
+}
