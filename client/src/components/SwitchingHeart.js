@@ -1,6 +1,7 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useState } from "react";
 import BlackHeart from "./BlackHeart";
 import RedHeart from "./RedHeart";
+import './SwitchingHeart.css'
 
 export default function SwitchingHeart() {
 
@@ -18,7 +19,7 @@ export default function SwitchingHeart() {
   }
 
   return (
-    <div style={{ cursor: "pointer" }} onClick={handleSwitchingHeart}>
+    <div className="HeartPositionCss" onClick={handleSwitchingHeart}>
       {isFavorite ? (
         <RedHeart />) :
         (<BlackHeart />
