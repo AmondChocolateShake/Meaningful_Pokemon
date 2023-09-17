@@ -22,22 +22,22 @@
   ],
 
   "fav_pokemons" : [{
-    "id" :"1",
+    "id" :"32",
     "name":"브케인",
     "imgLink":"pikacu.webp"
   },
   {
-    "id" :"2",
+    "id" :"48",
     "name":"마그케인",
     "imgLink":"pikacu.webp"
   },
   {
-    "id" :"3",
+    "id" :"59",
     "name":"블레이범",
     "imgLink":"pikacu.webp"
   },
   {
-    "id" :"4",
+    "id" :"132",
     "name":"치코리타",
     "imgLink":"pikacu.webp"
   } 
