@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import BlackHeart from "./BlackHeart";
-import RedHeart from "./RedHeart";
 
 
 export default function PokemonElement(props) {
@@ -74,8 +72,6 @@ export default function PokemonElement(props) {
             <div style={infoSt}>
                 <div>{poke.id}</div>
                 <div>{poke.name}</div>
-                {/* <RedHeart/> */}
-                {/* <BlackHeart/> */}
             </div>
         </div>
     );
