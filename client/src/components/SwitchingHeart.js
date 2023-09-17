@@ -1,20 +1,26 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import BlackHeart from "./BlackHeart";
 import RedHeart from "./RedHeart";
 
 export default function SwichingHeart() {
 
-  const [favorite, setFavorite] = useState(false)
+  const [isFavorite, setFavorite] = useState(false)
 
 
-  function ColorSwitchingHeart() {
+  function handleSwitchingHeart() {
     setFavorite(true);
   }
 
+  useEffect(() => {
+
+  })
+
   return (
-    <div>
-      <BlackHeart />
-      <RedHeart />
+    <div onClick={}>
+      {isFavorite ? (
+        <RedHeart />) :
+        (<BlackHeart />
+        )}
     </div>
   )
 
