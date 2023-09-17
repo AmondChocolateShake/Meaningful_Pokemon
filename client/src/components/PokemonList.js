@@ -35,8 +35,11 @@ function PokemonList() {
         </div>
       ))}
       <div className="PokemonList">
-        {_fav_pokemons.map((pokemon) => (
+          {_fav_pokemons.map((pokemon) => (
+        <div>
           <PokemonElement key={pokemon.id} id={pokemon.id} name={pokemon.name} imgLink={pokemon.imgLink} />
+          <SwitchingHeart className="HeartPositionCss" />
+        </div>
         ))}
       </div>
 
