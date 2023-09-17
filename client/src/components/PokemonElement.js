@@ -1,77 +1,81 @@
 import { useEffect, useState } from "react";
+import BlackHeart from "./BlackHeart";
+import RedHeart from "./RedHeart";
 
 
-export default function PokemonElement(props){
-    const [clicked,setClicked]=useState(false);
-    const [poke,setPoke]=useState({
-        id:props.id,
-        name:props.name,
-        imgLink:props.imgLink
+export default function PokemonElement(props) {
+    const [clicked, setClicked] = useState(false);
+    const [poke, setPoke] = useState({
+        id: props.id,
+        name: props.name,
+        imgLink: props.imgLink
     })
-    const [boxSt,setBoxSt]=useState({
-        display:"flex",
-        flexDirection:"column",
-        justifyContent:"center",
-        alignItems:"center",
-        
-        backgroundColor:"gray",
-        width:"150px",
-        height:"150px",
-        border:"3px solid white",
-        borderRadius:"10px",
-        marginLeft:"10px"
+    const [boxSt, setBoxSt] = useState({
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+
+        backgroundColor: "gray",
+        width: "150px",
+        height: "150px",
+        border: "3px solid white",
+        borderRadius: "10px",
+        marginLeft: "10px"
     })
-    const[infoSt,setInfoSt]=useState({
-        display:"flex",
-        justifyContent:"space-around",
-        alignItems:"center",
+    const [infoSt, setInfoSt] = useState({
+        display: "flex",
+        justifyContent: "space-around",
+        alignItems: "center",
 
-        width:"100%",
-        height:"50px",
-        borderTop:"1px solid rgb(196 196 196)",
-        borderBottomLeftRadius:"7px",
-        borderBottomRightRadius:"7px"
+        width: "100%",
+        height: "50px",
+        borderTop: "1px solid rgb(196 196 196)",
+        borderBottomLeftRadius: "7px",
+        borderBottomRightRadius: "7px"
 
     })
 
-    useEffect(()=>{
+    useEffect(() => {
         changeColor(clicked);
-    },[clicked])
+    }, [clicked])
 
-    function changeColor(state){
-        console.log("changeColor"+state)
-        if(state){
+    function changeColor(state) {
+        console.log("changeColor" + state)
+        if (state) {
             setBoxSt({
                 ...boxSt,
-                backgroundColor:"#2B4865"
+                backgroundColor: "#2B4865"
             })
             setInfoSt({
                 ...infoSt,
-                backgroundColor:"#84A7A1"
+                backgroundColor: "#84A7A1"
             })
-        }else{
+        } else {
             setBoxSt({
                 ...boxSt,
-                backgroundColor:"gray"
+                backgroundColor: "gray"
             })
             setInfoSt({
                 ...infoSt,
-                backgroundColor:"gray"
+                backgroundColor: "gray"
             })
         }
     }
 
-    const clickHandler=()=>{
+    const clickHandler = () => {
         console.log("clicked")
         setClicked(!clicked);//클릭시 상태 변환
     }
 
-    return(
+    return (
         <div style={boxSt} onClick={clickHandler}>
-            <img style={{width:"100px",height:"100px"}} src={poke.imgLink} alt="poke"></img>
+            <img style={{ width: "100px", height: "100px" }} src={poke.imgLink} alt="poke"></img>
             <div style={infoSt}>
                 <div>{poke.id}</div>
                 <div>{poke.name}</div>
+                {/* <RedHeart/> */}
+                {/* <BlackHeart/> */}
             </div>
         </div>
     );
