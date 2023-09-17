@@ -17,25 +17,19 @@ export default function PokemonElement(props){
         backgroundColor:"gray",
         width:"150px",
         height:"150px",
-        border:"1px solid black"
+        border:"3px solid white",
+        borderRadius:"10px",
+        marginLeft:"10px"
     })
-
-
-
-    useEffect(()=>{
-        console.log(props)
-    },[poke])
-
-
-
-    const info={
+    const[infoSt,setInfoSt]=useState({
         display:"flex",
         justifyContent:"space-around",
         alignItems:"center",
 
         width:"100%",
-        height:"50px"
-    }
+        height:"50px",
+        borderTop:"1px solid rgb(196 196 196)"
+    })
 
     useEffect(()=>{
         changeColor(clicked);
@@ -46,11 +40,19 @@ export default function PokemonElement(props){
         if(state){
             setBoxSt({
                 ...boxSt,
-                backgroundColor:"white"
+                backgroundColor:"#2B4865"
+            })
+            setInfoSt({
+                ...infoSt,
+                backgroundColor:"#84A7A1"
             })
         }else{
             setBoxSt({
                 ...boxSt,
+                backgroundColor:"gray"
+            })
+            setInfoSt({
+                ...infoSt,
                 backgroundColor:"gray"
             })
         }
@@ -64,7 +66,7 @@ export default function PokemonElement(props){
     return(
         <div style={boxSt} onClick={clickHandler}>
             <img style={{width:"100px",height:"100px"}} src={poke.imgLink} alt="poke"></img>
-            <div style={info}>
+            <div style={infoSt}>
                 <div>{poke.id}</div>
                 <div>{poke.name}</div>
             </div>
