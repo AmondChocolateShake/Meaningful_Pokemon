@@ -1,7 +1,8 @@
 import React from "react";
 import PokemonElement from "./PokemonElement";
-import './PokemonList.css'
+import './PokemonList.css';
 import SwitchingHeart from "./SwitchingHeart";
+import data from '../dummy.json';
 
 const pokemonData = {
   "1": "Bulbasaur",
