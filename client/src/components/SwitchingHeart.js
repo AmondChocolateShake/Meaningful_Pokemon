@@ -11,6 +11,7 @@ export default function SwitchingHeart() {
   function handleSwitchingHeart() {
 
     if (isFavorite) {
+      console.log("like it", )
       setFavorite(false)
     }
     else {
