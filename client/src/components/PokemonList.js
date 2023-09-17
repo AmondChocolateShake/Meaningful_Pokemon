@@ -1,6 +1,7 @@
 import React from "react";
 import PokemonElement from "./PokemonElement";
 import './PokemonList.css'
+import SwitchingHeart from "./SwitchingHeart";
 
 const pokemonData = {
   "1": "Bulbasaur",
@@ -19,13 +20,15 @@ const pokemonData = {
   "14": "Kakuna",
 }
 
-function PokemonList(){
+function PokemonList() {
   return (
     <div className="PokemonList">
-        {Object.entries(pokemonData).map(([id,name])=>(
-          
-          <PokemonElement key={id} id={id} name={name} imgLink={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}/>
-        ))}
+      {Object.entries(pokemonData).map(([id, name]) => (
+        <div>
+          <PokemonElement key={id} id={id} name={name} imgLink={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`} />
+          <SwitchingHeart className="HeartPositionCss"/>
+        </div>
+      ))}
     </div>
   )
 }

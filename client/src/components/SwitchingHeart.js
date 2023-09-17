@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import BlackHeart from "./BlackHeart";
 import RedHeart from "./RedHeart";
 
-export default function SwichingHeart() {
+export default function SwitchingHeart() {
 
   const [isFavorite, setFavorite] = useState(false)
 

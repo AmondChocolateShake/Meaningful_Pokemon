@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import SwichingHeart from "./SwitchingHeart";
-
 
 export default function PokemonElement(props) {
     const [clicked, setClicked] = useState(false);
@@ -73,14 +71,7 @@ export default function PokemonElement(props) {
             <div style={infoSt}>
                 <div>{poke.id}</div>
                 <div>{poke.name}</div>
-                <SwichingHeart />
             </div>
         </div>
     );
 }
-
-
-
-
-
-
