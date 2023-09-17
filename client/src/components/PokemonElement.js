@@ -28,7 +28,10 @@ export default function PokemonElement(props){
 
         width:"100%",
         height:"50px",
-        borderTop:"1px solid rgb(196 196 196)"
+        borderTop:"1px solid rgb(196 196 196)",
+        borderBottomLeftRadius:"7px",
+        borderBottomRightRadius:"7px"
+
     })
 
     useEffect(()=>{

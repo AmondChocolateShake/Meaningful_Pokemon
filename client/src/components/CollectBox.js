@@ -1,4 +1,4 @@
-
+import PokemonList from "./PokemonList"
 
 
 function CollectBox(){
@@ -7,7 +7,7 @@ function CollectBox(){
 
     return(
         <div>
-            
+            <PokemonList/>
         </div>
     )
 }
