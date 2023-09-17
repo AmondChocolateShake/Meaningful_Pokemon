@@ -2,23 +2,25 @@ import { useEffect, useState } from "react";
 
 
 export default function PokemonElement(props){
+    const [clicked,setClicked]=useState(false);
+    const [poke,setPoke]=useState({
+        id:props.id,
+        name:props.name,
+        imgLink:props.imgLink
+    })
     const [boxSt,setBoxSt]=useState({
         display:"flex",
         flexDirection:"column",
         justifyContent:"center",
         alignItems:"center",
         
+        backgroundColor:"gray",
         width:"150px",
         height:"150px",
         border:"1px solid black"
     })
 
 
-    const [poke,setPoke]=useState({
-        id:props.id,
-        name:props.name,
-        imgLink:props.imgLink
-    })
 
     useEffect(()=>{
         console.log(props)
@@ -35,12 +37,28 @@ export default function PokemonElement(props){
         height:"50px"
     }
 
+    useEffect(()=>{
+        changeColor(clicked);
+    },[clicked])
+
+    function changeColor(state){
+        console.log("changeColor"+state)
+        if(state){
+            setBoxSt({
+                ...boxSt,
+                backgroundColor:"white"
+            })
+        }else{
+            setBoxSt({
+                ...boxSt,
+                backgroundColor:"gray"
+            })
+        }
+    }
 
     const clickHandler=()=>{
-        setBoxSt({
-            ...boxSt,
-            backgroundColor:"gray"
-        })
+        console.log("clicked")
+        setClicked(!clicked);//클릭시 상태 변환
     }
 
     return(
