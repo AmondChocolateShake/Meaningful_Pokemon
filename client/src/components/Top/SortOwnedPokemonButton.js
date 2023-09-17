@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import './SortOwnedPokemonButton.css'
 
 export default function SortOwnedPokemonButton() {
@@ -12,3 +13,6 @@ export default function SortOwnedPokemonButton() {
   )
 
 }
+=======
+
+>>>>>>> a4ec19c (내비게이션 바 스타일링 중)
