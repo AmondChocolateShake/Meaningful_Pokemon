@@ -1,3 +1,4 @@
 function getAllPokemons(req,res) {
-  const data = getPokemon;
+  const data = getPokemonData();
+  res.json(data);
 }
