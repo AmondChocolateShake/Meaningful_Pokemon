@@ -1,21 +1,17 @@
 import PokeModel from "./PokeModel";
 
 
-export default class PokeHandler{
+const pokeModel=null;
 
-    getAllPokemons(){
-
-    }
-
-    getMyPokemons(){
-
-    }
-
-    getFavPokemons(){
-        
-    }
-
-
+export function initPokemonDatabase(all,fav,my){
+    pokeModel=new PokeModel(all,fav,my);
 }
 
+export function pushPokeIntoFav(poke){
+    pokeModel.pushFavPokemon(poke);
+}
+
+export function pushPokeIntoMyPoke(poke){
+    
+}
 

@@ -22,8 +22,6 @@ export default class PokeModel{
     //         this.my_pokemons=data.my_pokemons;
     //     })
     // }
-    
-
 
 
     //모든 포켓몬 리스트 반환
