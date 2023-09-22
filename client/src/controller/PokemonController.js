@@ -1,4 +1,4 @@
-import PokeModel from "../model/PokeModel";
+import PokeModel from '../model/PokeModel.js';
 
 const pokeModel = new PokeModel([], [], []);
 
