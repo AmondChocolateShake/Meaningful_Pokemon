@@ -1,9 +1,9 @@
 
 
 export default class PokeModel{
-    pokemons=[{}];
-    fav_pokemons=[{}]
-    my_pokemons=[{}]
+    pokemons=[];
+    fav_pokemons=[];
+    my_pokemons=[];
 
     constructor(poke,fav,my){
         this.pokemons=poke;
@@ -45,7 +45,7 @@ export default class PokeModel{
     }
 
     pushFavPokemon(fav){
-        this.fav_pokemons=fav;
+        this.fav_pokemons.push(fav)
     }
 
 
