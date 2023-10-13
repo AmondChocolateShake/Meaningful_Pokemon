@@ -74,7 +74,7 @@ export default function PokemonElement(props) {
             <div style={boxSt} onClick={clickHandler}>
                 <img style={{ width: "100px", height: "100px" }} src={poke.imgLink} alt="poke"></img>
                 <div style={infoSt}>
-                    <div>{poke.id}id</div>
+                    <div>{poke.id}</div>
                     <div>{poke.name}</div>
                 </div>
             </div>
