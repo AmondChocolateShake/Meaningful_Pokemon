@@ -34,7 +34,7 @@ let pokemonDataA = [
 let pokemonDataB = [
   { id: 1, name: '피카츄', type: '전기', owned: true, favorite: false },
   { id: 2, name: '파이리', type: '불', owned: true, favorite: false },
-  { id: 3, name: '꼬부기', type: '물', owned: false, favorite: true }
+  { id: 3, name: '꼬부기', type: '물', owned: false, favorite: false }
 ];
 
 function PokemonList() {
