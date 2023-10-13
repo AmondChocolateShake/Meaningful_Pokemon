@@ -5,7 +5,10 @@ export default function PokemonElement(props) {
     const [poke, setPoke] = useState({
         id: props.id,
         name: props.name,
-        imgLink: props.imgLink
+        imgLink: props.imgLink,
+        type: props.type,
+        owned: props.owned,
+        favorite: props.favorite
     })
     const [boxSt, setBoxSt] = useState({
         display: "flex",
@@ -34,12 +37,13 @@ export default function PokemonElement(props) {
     })
 
     useEffect(() => {
+        console.dir(props.id)
         changeColor(clicked);
     }, [clicked])
 
-    function changeColor(state) {
-        console.log("changeColor" + state)
-        if (state) {
+    function changeColor(props) {
+        console.log("changeColor" + props.owned)
+        if (props.owned) {
             setBoxSt({
                 ...boxSt,
                 backgroundColor: "#2B4865"
@@ -66,12 +70,24 @@ export default function PokemonElement(props) {
     }
 
     return (
-        <div style={boxSt} onClick={clickHandler}>
-            <img style={{ width: "100px", height: "100px" }} src={poke.imgLink} alt="poke"></img>
-            <div style={infoSt}>
-                <div>{poke.id}</div>
-                <div>{poke.name}</div>
+        <div>
+            {/* {Object.entries(poke).map((...poke) => (
+                <div style={boxSt} onClick={clickHandler}>
+                    <img style={{ width: "100px", height: "100px" }} src={poke.imgLink} alt="poke"></img>
+                    <div style={ infoSt }>
+                        <div>{poke.id}</div>
+                        <div>{poke.name}</div>
+                    </div>
+                </div>
+            ))
+            } */}
+            <div style={boxSt} onClick={clickHandler}>
+                <img style={{ width: "100px", height: "100px" }} src={poke.imgLink} alt="poke"></img>
+                <div style={infoSt}>
+                    <div>{poke.id}</div>
+                    <div>{poke.name}</div>
+                </div>
             </div>
-        </div>
+        </div >
     );
 }
