@@ -36,14 +36,16 @@ export default function PokemonElement(props) {
 
     })
 
+    // const { id, name, imgLink, type, owned, favorite } = props;
+
     useEffect(() => {
-        console.dir(props.id)
-        changeColor(clicked);
+        console.dir(poke.id)
+        changeColor(poke.owned);
     }, [clicked])
 
     function changeColor(props) {
         console.log("changeColor" + props.owned)
-        if (props.owned) {
+        if (poke.owned) {
             setBoxSt({
                 ...boxSt,
                 backgroundColor: "#2B4865"

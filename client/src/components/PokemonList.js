@@ -41,7 +41,7 @@ let pokemonDataB = [
 function PokemonList() {
   return (
     <div className="PokemonList">
-      {Object.entries(pokemonDataA).map(([{ id, name, type, owned, favorite }]) => (
+      {Object.entries(pokemonDataB).map(([{ id, name, type, owned, favorite }]) => (
         <div>
           <PokemonElement
             key={id}
