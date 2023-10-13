@@ -11,7 +11,6 @@ export function pushPokeIntoFav(poke){
     pokeModel.pushFavPokemon(poke);
 }
 
-export function pushPokeIntoMyPoke(poke){
-    
+export function pushPokeIntoMyPoke(poke) {
+    pokeModel.pushNewCollection(poke);
 }
-
