@@ -39,8 +39,8 @@ export default function PokemonElement(props) {
     // const { id, name, imgLink, type, owned, favorite } = props;
 
     useEffect(() => {
-        console.dir(poke.id)
-        changeColor(poke.owned);
+        console.log(props)
+        changeColor(props);
     }, [clicked])
 
     function changeColor(props) {
@@ -72,7 +72,7 @@ export default function PokemonElement(props) {
     }
 
     return (
-        <div>
+        <div >
             {/* {Object.entries(poke).map((...poke) => (
                 <div style={boxSt} onClick={clickHandler}>
                     <img style={{ width: "100px", height: "100px" }} src={poke.imgLink} alt="poke"></img>
@@ -86,7 +86,7 @@ export default function PokemonElement(props) {
             <div style={boxSt} onClick={clickHandler}>
                 <img style={{ width: "100px", height: "100px" }} src={poke.imgLink} alt="poke"></img>
                 <div style={infoSt}>
-                    <div>{poke.id}</div>
+                    <div>{poke.id}id</div>
                     <div>{poke.name}</div>
                 </div>
             </div>

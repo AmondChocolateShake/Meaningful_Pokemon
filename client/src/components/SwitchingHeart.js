@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BlackHeart from "./BlackHeart";
 import RedHeart from "./RedHeart";
 import './SwitchingHeart.css'
 
-export default function SwitchingHeart() {
+export default function SwitchingHeart(favorite) {
 
   const [isFavorite, setFavorite] = useState(false)
 
+  useEffect((favorite) => {
+    console.log(favorite)
+    setFavorite(favorite)
+  }, [favorite])
 
   function handleSwitchingHeart() {
 
     if (isFavorite) {
-      console.log("like it", )
+      console.log("like it",)
       setFavorite(false)
     }
     else {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PokemonElement from "./PokemonElement";
 import './PokemonList.css'
 import SwitchingHeart from "./SwitchingHeart";
@@ -34,24 +34,24 @@ let pokemonDataA = [
 let pokemonDataB = [
   { id: 1, name: '피카츄', type: '전기', owned: true, favorite: false },
   { id: 2, name: '파이리', type: '불', owned: true, favorite: false },
-  { id: 3, name: '꼬부기', type: '물', owned: false, favorite: true },
-
+  { id: 3, name: '꼬부기', type: '물', owned: false, favorite: true }
 ];
 
 function PokemonList() {
   return (
     <div className="PokemonList">
-      {Object.entries(pokemonDataB).map(([{ id, name, type, owned, favorite }]) => (
-        <div>
+      {pokemonDataB.map((pokemon) => (
+        <div key={pokemon.id}>
           <PokemonElement
-            key={id}
-            id={id}
-            name={name}
-            type={type}
-            owned={owned}
-            favorite={favorite}
-            imgLink={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`} />
-          <SwitchingHeart className="HeartPositionCss" />
+            id={pokemon.id}
+            name={pokemon.name}
+            type={pokemon.type}
+            owned={pokemon.owned}
+            imgLink={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`} />
+          <SwitchingHeart
+            className="HeartPositionCss"
+            favorite={pokemon.favorite}
+          />
         </div>
       ))}
       {/* <div className="PokemonList">
