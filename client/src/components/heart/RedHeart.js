@@ -1,5 +1,5 @@
 import React from "react";
-import redHeart from '../img/redHeart.png'
+import redHeart from '../../img/redHeart.png'
 
 export default function RedHeart(){
   return (

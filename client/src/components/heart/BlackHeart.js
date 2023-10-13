@@ -1,5 +1,5 @@
 import React from "react";
-import blackHeart from '../img/blackHeart.png'
+import blackHeart from '../../img/blackHeart.png'
 
 export default function BlackHeart(){
 

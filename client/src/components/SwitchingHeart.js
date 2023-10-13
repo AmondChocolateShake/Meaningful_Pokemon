@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import BlackHeart from "./BlackHeart";
-import RedHeart from "./RedHeart";
+import BlackHeart from "./heart/BlackHeart";
+import RedHeart from "./heart/RedHeart";
 import './SwitchingHeart.css'
 
 export default function SwitchingHeart(props) {
