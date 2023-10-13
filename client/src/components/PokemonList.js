@@ -26,15 +26,15 @@ const pokemonData = {
 }
 
 let pokemonDataA = [
-  { id: 1, name: '피카츄', type: '전기', owned: false, favorite: false },
+  { id: 1, name: '피카츄', type: '전기', owned: false, favorite: true },
   { id: 2, name: '파이리', type: '불', owned: false, favorite: false },
-  { id: 3, name: '꼬부기', type: '물', owned: false, favorite: false },
+  { id: 3, name: '꼬부기', type: '물', owned: false, favorite: true },
 ];
 
 let pokemonDataB = [
-  { id: 1, name: '피카츄', type: '전기', owned: true, favorite: false },
-  { id: 2, name: '파이리', type: '불', owned: true, favorite: false },
-  { id: 3, name: '꼬부기', type: '물', owned: false, favorite: false }
+  { id: 4, name: '어니부기', type: '전기', owned: true, favorite: false },
+  { id: 5, name: '브케인', type: '불', owned: true, favorite: true },
+  { id: 6, name: '꼬링크', type: '물', owned: false, favorite: false }
 ];
 
 function PokemonList() {
@@ -54,18 +54,6 @@ function PokemonList() {
           />
         </div>
       ))}
-      {/* <div className="PokemonList">
-        {_fav_pokemons.map((pokemon) => (
-          <div>
-            <PokemonElement key={pokemon.id} id={pokemon.id} name={pokemon.name} imgLink={pokemon.imgLink} />
-            <SwitchingHeart className="HeartPositionCss" />
-          </div>
-        ))}
-      </div> */}
-
-      {/* <div>
-        <PokemonElement key={_fav_pokemons[0].id} id={_fav_pokemons[0].id} name={_fav_pokemons[0].name} imgLink={_fav_pokemons[0].imgLink} />
-      </div> */}
     </div>
   )
 }

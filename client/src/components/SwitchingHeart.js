@@ -8,7 +8,6 @@ export default function SwitchingHeart(props) {
   const [isFavorite, setFavorite] = useState(false)
 
   useEffect(() => {
-    console.log(props)
     setFavorite(props.favorite)
   }, [])
 

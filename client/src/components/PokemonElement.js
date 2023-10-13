@@ -42,9 +42,8 @@ export default function PokemonElement(props) {
     }, [clicked])
 
     function changeColor() {
-        console.log("changeColor," + poke.name + "is" + poke.owned)
+        // console.log("changeColor," + poke.name + "is" + poke.owned)
         if (poke.owned) {
-            console.log("setBoxst True")
             setBoxSt({
                 ...boxSt,
                 backgroundColor: "#2B4865"
