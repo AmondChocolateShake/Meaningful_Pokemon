@@ -30,4 +30,4 @@ const addPokemonData = [
   { id: 4, name: '냐옹', type: '노말', owned: false, favorite: true },
 ]
 
-updatePokemon(pokemonData);
+// updatePokemon(pokemonData);

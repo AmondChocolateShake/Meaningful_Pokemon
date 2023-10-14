@@ -2,7 +2,11 @@ import React, { useEffect } from "react";
 import PokemonElement from "./PokemonElement";
 import './PokemonList.css'
 import SwitchingHeart from "./SwitchingHeart";
+
+import '../controller/PokemonController.js'
+import '../model/pokeHandler.js'
 import data from '../dummy.json'
+import { pushPokeIntoFav } from "../model/pokeHandler.js";
 
 const _pokemonData = JSON.parse(JSON.stringify(data));
 // const _fav_pokemons = _pokemonData.fav_pokemons;
@@ -36,7 +40,7 @@ let AllData = [
 
 let myData = [
   { id: 4, name: '어니부기', type: '전기', owned: true, favorite: true },
-  { id: 5, name: '브케인', type: '불', owned: true, favorite: true },
+  { id: 5, name: '브케인', type: '불', owned: false, favorite: false },
   { id: 6, name: '꼬링크', type: '물', owned: true, favorite: true }
 ];
 
@@ -60,6 +64,10 @@ AllData = AllData.map((pokemon) => {
 
 function PokemonList() {
 
+  const handleFav = (onoffHeart) => {
+    pushPokeIntoFav(onoffHeart);
+  }
+
   useEffect(() => {
     console.log("mount...")
     return () => {
@@ -78,6 +86,7 @@ function PokemonList() {
             owned={pokemon.owned}
             imgLink={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`} />
           <SwitchingHeart
+            onClick={handleFav}
             className="HeartPositionCss"
             favorite={pokemon.favorite}
           />
