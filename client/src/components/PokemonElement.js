@@ -39,7 +39,7 @@ export default function PokemonElement(props) {
 
     useEffect(() => {
         changeColor(poke.owned);
-    }, [clicked])
+    }, [poke])
 
     function changeColor() {
         // console.log("changeColor," + poke.name + "is" + poke.owned)
@@ -66,7 +66,8 @@ export default function PokemonElement(props) {
 
     const clickHandler = () => {
         console.log("clicked")
-        setClicked(!clicked);//클릭시 상태 변환
+        //poke 객체 전개로 모든 속성 전달 후 owned의 상태를 반전
+        setPoke({ ...poke, owned: !poke.owned });
     }
 
     return (
