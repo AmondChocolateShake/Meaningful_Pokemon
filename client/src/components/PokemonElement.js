@@ -68,6 +68,7 @@ export default function PokemonElement(props) {
         console.log("clicked")
         //poke 객체 전개로 모든 속성 전달 후 owned의 상태를 반전
         setPoke({ ...poke, owned: !poke.owned });
+        props.callback(poke);
     }
 
     return (

@@ -6,28 +6,11 @@ import SwitchingHeart from "./SwitchingHeart";
 import '../controller/PokemonController.js'
 import '../model/pokeHandler.js'
 import data from '../dummy.json'
-import { pushPokeIntoFav } from "../model/pokeHandler.js";
+import { pushPokeIntoFav, pushPokeIntoMyPoke } from "../model/pokeHandler.js";
 
 const _pokemonData = JSON.parse(JSON.stringify(data));
 // const _fav_pokemons = _pokemonData.fav_pokemons;
 // console.log(_fav_pokemons);
-
-// const pokemonData = {
-//   "1": "Bulbasaur",
-//   "2": "Ivysaur",
-//   "3": "Venusaur",
-//   "4": "Charmander",
-//   "5": "Charmeleon",
-//   "6": "Charizard",
-//   "7": "Squirtle",
-//   "8": "Wartortle",
-//   "9": "Blastoise",
-//   "10": "Caterpie",
-//   "11": "Metapod",
-//   "12": "Butterfree",
-//   "13": "Weedle",
-//   "14": "Kakuna",
-// }
 
 let AllData = [
   { id: 1, name: '피카츄', type: '전기', owned: false, favorite: false },
@@ -64,8 +47,12 @@ AllData = AllData.map((pokemon) => {
 
 function PokemonList() {
 
-  const handleFav = (onoffHeart) => {
-    pushPokeIntoFav(onoffHeart);
+  const handleFav = () => {
+    pushPokeIntoFav();
+  }
+  const handleMine = (myPoke) => {
+    console.log(myPoke)
+    pushPokeIntoMyPoke(myPoke);
   }
 
   useEffect(() => {
@@ -84,7 +71,8 @@ function PokemonList() {
             name={pokemon.name}
             type={pokemon.type}
             owned={pokemon.owned}
-            imgLink={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`} />
+            imgLink={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
+            callback={handleMine} />
           <SwitchingHeart
             onClick={handleFav}
             className="HeartPositionCss"
