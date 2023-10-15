@@ -1,7 +1,7 @@
 import PokeModel from "./PokeModel";
 
 
-const pokeModel=null;
+let pokeModel=null;
 
 export function initPokemonDatabase(all,fav,my){
     pokeModel=new PokeModel(all,fav,my);
