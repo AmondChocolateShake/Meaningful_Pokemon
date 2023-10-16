@@ -12,14 +12,8 @@ export default function SwitchingHeart(props) {
   }, [])
 
   function handleSwitchingHeart() {
-
-    if (isFavorite) {
-      console.log("like it",)
-      setFavorite(false)
-    }
-    else {
-      setFavorite(true);
-    }
+    console.log("like it", isFavorite)
+    setFavorite(!isFavorite)
   }
 
   return (

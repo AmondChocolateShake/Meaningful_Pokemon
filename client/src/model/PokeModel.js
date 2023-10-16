@@ -44,6 +44,7 @@ export default class PokeModel {
     }
 
     pushFavPokemon(fav) {
+        console.log("좋아요 포켓몬 push", fav)
         this.fav_pokemons.push(fav)
     }
 

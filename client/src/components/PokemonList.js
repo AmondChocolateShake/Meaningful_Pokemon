@@ -6,8 +6,7 @@ import SwitchingHeart from "./SwitchingHeart";
 import '../controller/PokemonController.js'
 import '../model/pokeHandler.js'
 import data from '../dummy.json'
-import { pushPokeIntoFav, pushPokeIntoMyPoke } from "../model/pokeHandler.js";
-import { updatePokemon } from "../controller/PokemonController.js";
+import { updateFavoritePokemons, updatePokemons } from "../controller/PokemonController.js";
 
 const _pokemonData = JSON.parse(JSON.stringify(data));
 // const _fav_pokemons = _pokemonData.fav_pokemons;
@@ -27,10 +26,6 @@ let myData = [
   { id: 5, name: '브케인', type: '불', owned: false, favorite: false },
   { id: 6, name: '꼬링크', type: '물', owned: true, favorite: true }
 ];
-
-
-
-
 
 function PokemonList() {
   
@@ -52,13 +47,13 @@ function PokemonList() {
   });
   // 좋아요 포켓몬 데이터 핸들링
   const handleFav = () => {
-    pushPokeIntoFav();
+    updateFavoritePokemons();
   }
 
   //가진 포켓몬 데이터 핸들링
   const handleMine = (myPoke) => {
     // console.log(myPoke)
-    updatePokemon(myPoke);
+    updatePokemons(myPoke);
   }
 
   useEffect(() => {
