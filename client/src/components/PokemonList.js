@@ -30,8 +30,8 @@ let myData = [
 
 
 AllData = AllData.map((pokemon) => {
-  //유저 데이터에서 id과 name 값이 일치하면
-  const matchingPokemon = myData.find((data) => data.id === pokemon.id && data.name === pokemon.name);
+  //기존 데이터와 유저 데이터 id 값 비교
+  const matchingPokemon = myData.find((data) => data.id === pokemon.id);
   if (matchingPokemon) {
     return {
       ...pokemon,
@@ -47,9 +47,12 @@ AllData = AllData.map((pokemon) => {
 
 function PokemonList() {
 
+  // 좋아요 포켓몬 데이터 핸들링
   const handleFav = () => {
     pushPokeIntoFav();
   }
+
+  //가진 포켓몬 데이터 핸들링링
   const handleMine = (myPoke) => {
     console.log(myPoke)
     pushPokeIntoMyPoke(myPoke);
