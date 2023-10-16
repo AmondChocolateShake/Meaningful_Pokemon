@@ -1,5 +1,3 @@
-
-
 export default class PokeModel{
     pokemons=[];
     fav_pokemons=[];

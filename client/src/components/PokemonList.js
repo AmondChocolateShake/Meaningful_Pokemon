@@ -7,6 +7,7 @@ import '../controller/PokemonController.js'
 import '../model/pokeHandler.js'
 import data from '../dummy.json'
 import { pushPokeIntoFav, pushPokeIntoMyPoke } from "../model/pokeHandler.js";
+import { updatePokemon } from "../controller/PokemonController.js";
 
 const _pokemonData = JSON.parse(JSON.stringify(data));
 // const _fav_pokemons = _pokemonData.fav_pokemons;
@@ -54,10 +55,10 @@ function PokemonList() {
     pushPokeIntoFav();
   }
 
-  //가진 포켓몬 데이터 핸들링링
+  //가진 포켓몬 데이터 핸들링
   const handleMine = (myPoke) => {
-    console.log(myPoke)
-    pushPokeIntoMyPoke(myPoke);
+    // console.log(myPoke)
+    updatePokemon(myPoke);
   }
 
   useEffect(() => {

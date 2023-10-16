@@ -1,13 +1,13 @@
-import PokeModel from "./PokeModel";
+import PokeModel from "./PokeModel.js";
 
 
-let pokeModel=null;
+let pokeModel = null;
 
-export function initPokemonDatabase(all,fav,my){
-    pokeModel=new PokeModel(all,fav,my);
+export function initPokemonDatabase(all, fav, my) {
+    pokeModel = new PokeModel(all, fav, my);
 }
 
-export function pushPokeIntoFav(poke){
+export function pushPokeIntoFav(poke) {
     pokeModel.pushFavPokemon(poke);
 }
 
