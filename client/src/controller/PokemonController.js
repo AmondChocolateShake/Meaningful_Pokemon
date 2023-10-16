@@ -1,5 +1,4 @@
 import PokeModel from '../model/PokeModel.js';
-import { initPokemonDatabase } from '../model/pokeHandler.js';
 
 const pokeModel = new PokeModel([], [], []);
 

@@ -55,14 +55,6 @@ function PokemonList() {
     // console.log(myPoke)
     updatePokemons(myPoke);
   }
-
-  useEffect(() => {
-    console.log("mount...")
-    return () => {
-      console.log("unmonut...")
-    }
-  }, [AllData])
-
   return (
     <div className="PokemonList">
       {AllData.map((pokemon) => (

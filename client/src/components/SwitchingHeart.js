@@ -9,7 +9,7 @@ export default function SwitchingHeart(props) {
 
   useEffect(() => {
     setFavorite(props.favorite)
-  }, [])
+  }, [props.favorite])
 
   function handleSwitchingHeart() {
     console.log("like it", isFavorite)
