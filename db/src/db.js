@@ -16,7 +16,13 @@ connection.connect((err) => {
   }
   console.log('MySQL에 연결되었습니다.');
 
-  // 이곳에서 SQL 쿼리 실행
+  connection.query('SELECT * FROM your_table', (err, rows) => {
+    if (err) {
+      console.error('Error executing SQL query:', err);
+      return;
+    }
+    console.log('Data from MySQL:', rows);
+  });
 
   connection.end(); // 연결 종료
 });
