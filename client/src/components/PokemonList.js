@@ -28,7 +28,7 @@ let myData = [
 ];
 
 function PokemonList() {
-  
+
   // const [renderData, setRenderData] = useState([])
 
   AllData = AllData.map((pokemon) => {
@@ -46,10 +46,10 @@ function PokemonList() {
     }
   });
   // 좋아요 포켓몬 데이터 핸들링
-  const handleFav = () => {
-    updateFavoritePokemons();
+  const handleFav = (pokemonId, favorite) => {
+    const updatedData = { id: pokemonId, favorite: favorite };
+    updateFavoritePokemons(updatedData);
   }
-
   //가진 포켓몬 데이터 핸들링
   const handleMine = (myPoke) => {
     // console.log(myPoke)
@@ -67,9 +67,9 @@ function PokemonList() {
             imgLink={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
             callback={handleMine} />
           <SwitchingHeart
-            onClick={handleFav}
             className="HeartPositionCss"
             favorite={pokemon.favorite}
+            callback={(favorite) => handleFav(pokemon.id, favorite)}
           />
         </div>
       ))}

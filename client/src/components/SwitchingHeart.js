@@ -13,7 +13,9 @@ export default function SwitchingHeart(props) {
 
   function handleSwitchingHeart() {
     console.log("like it", isFavorite)
-    setFavorite(!isFavorite)
+    const updatedFavorite = !isFavorite;
+    setFavorite(updatedFavorite);
+    props.callback(updatedFavorite);
   }
 
   return (

@@ -7,6 +7,12 @@ export function getAllPokemons(req, res) {
   const data = pokeModel.getPokemons();
   console.log(data)
 }
+//좋아요 한 포켓몬 가져오기
+export function getFavoritePokemons(req, res) {
+  const data = pokeModel.getFavoritePokemons();
+  console.log(data)
+  res.json(data);
+}
 
 //포켓몬 데이터 업데이트
 export async function updatePokemons(updatedData) {
@@ -38,8 +44,8 @@ export async function updatePokemons(updatedData) {
 
 //좋아요 포켓몬 업데이트
 export async function updateFavoritePokemons(updatedData) {
+  console.log(updatedData)
   try {
-    // 서버로 좋아요한 포켓몬 데이터 업데이트 요청 보내기
     const res = await fetch('http://localhost:3001/update-favorite-pokemons', {
       method: 'POST',
       headers: {
@@ -50,12 +56,8 @@ export async function updateFavoritePokemons(updatedData) {
 
     if (res.ok) {
       console.log('서버로 좋아요한 포켓몬 업데이트 요청 성공');
-
-      // 서버에서 업데이트된 좋아요한 포켓몬 데이터 가져오기
       const updatedDataFromServer = await res.json();
-
-      // 로컬 모델 업데이트
-      pokeModel.updateFavoritePokemon(updatedDataFromServer);
+      pokeModel.pushFavPokemon(updatedDataFromServer);
     } else {
       console.error('서버로 좋아요한 포켓몬 업데이트 요청 실패');
     }
@@ -64,11 +66,4 @@ export async function updateFavoritePokemons(updatedData) {
   }
 }
 
-
-//좋아요 한 포켓몬 가져오기
-export function getFavoritePokemons(req, res) {
-  const data = pokeModel.getFavoritePokemons();
-  console.log(data)
-  res.json(data);
-}
 
