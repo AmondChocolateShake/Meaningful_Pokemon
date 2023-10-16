@@ -65,7 +65,7 @@ export default function PokemonElement(props) {
     }
 
     const clickHandler = () => {
-        console.log("clicked")
+        console.log("clicked id", poke.id)
         //poke 객체 전개로 모든 속성 전달 후 owned의 상태를 반전
         setPoke({ ...poke, owned: !poke.owned });
         props.callback(poke);

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import PokemonElement from "./PokemonElement";
 import './PokemonList.css'
 import SwitchingHeart from "./SwitchingHeart";
@@ -29,24 +29,26 @@ let myData = [
 
 
 
-AllData = AllData.map((pokemon) => {
-  //기존 데이터와 유저 데이터 id 값 비교
-  const matchingPokemon = myData.find((data) => data.id === pokemon.id);
-  if (matchingPokemon) {
-    return {
-      ...pokemon,
-      owned: matchingPokemon.owned,
-      favorite: matchingPokemon.favorite,
-    };
-  }
-  else {
-    return pokemon
-  }
-});
 
 
 function PokemonList() {
+  
+  // const [renderData, setRenderData] = useState([])
 
+  AllData = AllData.map((pokemon) => {
+    //기존 데이터와 유저 데이터 id 값 비교
+    const matchingPokemon = myData.find((data) => data.id === pokemon.id);
+    if (matchingPokemon) {
+      return {
+        ...pokemon,
+        owned: matchingPokemon.owned,
+        favorite: matchingPokemon.favorite,
+      };
+    }
+    else {
+      return pokemon
+    }
+  });
   // 좋아요 포켓몬 데이터 핸들링
   const handleFav = () => {
     pushPokeIntoFav();
