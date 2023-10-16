@@ -1,17 +1,17 @@
-export default class PokeModel{
-    pokemons=[];
-    fav_pokemons=[];
-    my_pokemons=[];
+export default class PokeModel {
+    pokemons = [];
+    fav_pokemons = [];
+    my_pokemons = [];
 
-    constructor(poke,fav,my){
-        this.pokemons=poke;
-        this.fav_pokemons=fav;
-        this.my_pokemons=my;
+    constructor(poke, fav, my) {
+        this.pokemons = poke;
+        this.fav_pokemons = fav;
+        this.my_pokemons = my;
     };
 
     // fetchGetPoke(endpoint){
     //     const path=endpoint;
-        
+
     //     fetch(path)
     //     .then(res=>res.json())
     //     .then(data=>{
@@ -23,26 +23,27 @@ export default class PokeModel{
 
 
     //모든 포켓몬 리스트 반환
-    getPokemons(){
+    getPokemons() {
         return this.pokemons;
     }
 
     //내가 좋아요 표시한 포켓몬 리스트 반환
-    getFavoritePokemons(){
+    getFavoritePokemons() {
         return this.fav_pokemons;
     }
 
     //내가 수집한 포켓몬 리스트 반환
-    getMyPokemons(){
+    getMyPokemons() {
         return this.my_pokemons;
     }
 
     //내가 수집한 포켓몬 삽입
-    pushNewCollection(pokemon){
+    pushNewCollection(pokemon) {
+        console.log("수집 포켓몬 push", pokemon)
         this.my_pokemons.push(pokemon);
     }
 
-    pushFavPokemon(fav){
+    pushFavPokemon(fav) {
         this.fav_pokemons.push(fav)
     }
 
