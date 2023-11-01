@@ -1,2 +1,3 @@
 # Meaningful_Pokemon
-의미있는 포케몬
+
+포켓몬 스티커 도감 웹 사이트
