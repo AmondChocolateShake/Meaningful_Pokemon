@@ -3,9 +3,14 @@ const cors = require('cors')
 const app = express()
 const PORT = 3001;
 
-
-let AllData = [];
-let myData = [];
+let AllData = [
+  { id: 1, name: "피카츄", type: "전기", owned: false, favorite: false },
+  { id: 2, name: "파이리", type: "불", owned: false, favorite: false },
+  { id: 3, name: "꼬부기", type: "물", owned: false, favorite: false },
+  { id: 4, name: "어니부기", type: "전기", owned: false, favorite: false },
+  { id: 5, name: "브케인", type: "불", owned: false, favorite: false },
+  { id: 6, name: "꼬링크", type: "물", owned: false, favorite: false },
+];
 
 app.use(cors())
 app.use(express.json());
@@ -41,6 +46,7 @@ app.post('/update-favorite-pokemons', function (req, res) {
   console.log('업데이트된 좋아요 데이터:', updatedData);
   res.json(updatedData);
 });
+
 app.listen(PORT, () => {
   console.log("서버가 실행 중입니다.");
 });
