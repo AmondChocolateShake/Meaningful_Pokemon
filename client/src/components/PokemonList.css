@@ -3,10 +3,4 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
-
-  overflow: auto;
-
-
-  height:500px;
 }
