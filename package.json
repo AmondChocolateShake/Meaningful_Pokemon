@@ -1,0 +1,23 @@
+{
+  "name": "meaningful_pokemon",
+  "version": "1.0.0",
+  "description": "포켓몬 스티커 도감 웹 사이트",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "cd server && npm start",
+    "build": "babel src -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmondChocolateShake/Meaningful_Pokemon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmondChocolateShake/Meaningful_Pokemon/issues"
+  },
+  "homepage": "https://github.com/AmondChocolateShake/Meaningful_Pokemon#readme"
+}
